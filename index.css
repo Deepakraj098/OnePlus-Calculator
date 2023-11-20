@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.container{
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    
+
+}
+.container-items{
+    width: 21.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    background-color: rgb(53, 52, 52);
+}
+.area{
+    border:0.5px solid rgb(246, 244, 239);
+    border-radius: 6px;
+    overflow-x:auto;
+    width: 97.5%;
+    font-size: 35px;
+    padding: 20px;
+    height: 3.9em;
+    text-align: right;
+    margin: 5px 0px 0px 0px;
+    color: rgb(244, 244, 227);
+    background-color: rgb(165, 164, 164);
+    position: relative;
+    z-index: 1;
+}
+.content{
+    border-radius: 6px;
+    margin:0.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: black;
+    row-gap: 15px;
+    column-gap: 12px;
+
+}
+.numb{
+    margin-top:0.2em;
+    margin-bottom :0.2em;   
+    font-size: 30px;
+    background-color: black;
+    width: 2.5em;
+    height: 2.4em;
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
+.numb:hover{
+    background-color: rgb(50, 50, 50);
+    border-radius: 50%;
+    transform: scale(1.13);
+}
+#equal{
+    background-color: rgb(255, 94, 0); 
+}
+#equal:hover{
+    background-color: rgb(255, 125, 50); 
+}
+.round{
+    border-radius: 50%;
+    background-color: rgb(37, 37, 37);
+    height: 2.2em;
+    width: 2.22em;
+}
+#szero{
+    flex-grow: 2;
+    margin-top:0.2em;
+    margin-bottom :0.2em;  
+    margin-left: 0.2em; 
+    font-size: 30px;
+    width: 2.1em;
+    height: 2.4em;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    background-color: rgb(26, 26, 26);
+}
+#szero:hover{
+    background-color: rgb(50, 50, 50);
+    border-radius: 10%;
+    transform: scale(1.1);
+}
+.area::before{
+    content:"";
+    background-color: rgb(78, 78, 78);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: all 0.3s;
+    z-index: -1;   
+}
+.area:hover::before{
+    transform: scaleY(1);
+    content:"Welcome";
+    text-align: center;
+    padding-top: 15%; 
+    transition: all 1s;
+   
+}
+
+
